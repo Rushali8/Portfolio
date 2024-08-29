@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* index.css */
+@keyframes letterReveal {
+    from {
+      width: 0;
+      overflow: hidden;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .animate-letter-reveal {
+    display: inline-block;
+    animation: letterReveal 10s steps(30, end) forwards;
+    color: #f97416fb; /* Orange color for "Software Developer" */
+    white-space: nowrap;
+  }
+  
