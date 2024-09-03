@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiMonitor, FiGithub } from 'react-icons/fi';
 import project1 from '../assets/PortFolio.jpeg';
 import project2 from '../assets/FoodWebsite.jpeg';
 import project3 from '../assets/MoviesApp.jpeg';
@@ -10,7 +11,8 @@ function Projects() {
       title: 'Portfolio Website',
       description: 'A responsive portfolio website built with React and Tailwind CSS.',
       image: project1,
-      url: '#',
+      url: '#', // Replace with your portfolio URL
+      github: 'https://github.com/Rushali8/Portfolio', // Replace with your GitHub repo URL
     },
     {
       id: 2,
@@ -18,6 +20,7 @@ function Projects() {
       description: 'Responsive food website built with HTML, CSS, and JS.',
       image: project2,
       url: 'https://vermillion-caramel-dd207e.netlify.app/',
+      github: 'https://github.com/Rushali8/Simple-Responsive-Website', // Replace with your GitHub repo URL
     },
     {
       id: 3,
@@ -25,6 +28,7 @@ function Projects() {
       description: 'An engaging and responsive Movies App built with React and Tailwind CSS. Featuring dynamic movie listings, search functionality, and a sleek, modern design that enhances user experience.',
       image: project3,
       url: 'https://dynamic-taiyaki-c33ee2.netlify.app/',
+      github: 'https://github.com/Rushali8/MoviesApp', // Replace with your GitHub repo URL
     }
   ];
 
@@ -46,12 +50,14 @@ function Projects() {
               <div className="p-4 relative z-10">
                 <h3 className="text-2xl font-semibold mb-2 text-white">{project.title}</h3>
                 <p className="text-lg mb-4 text-gray-300">{project.description}</p>
-                <a
-                  href={project.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  View Project
-                </a>
+                <div className="flex items-center justify-center space-x-3">
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-300">
+                    <FiMonitor size={24} />
+                  </a>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-300">
+                    <FiGithub size={24} />
+                  </a>
+                </div>
               </div>
               {/* Mirror Effect */}
               <div className="absolute inset-0 flex justify-center items-end">
